@@ -9,14 +9,15 @@ class Dashboard extends Component {
         return (
             <div>
                 <ul>
-                    {movies.map((m) => (
-                        <div>
-                            <li>{m.original_title}</li>
-                            <img
-                                src={`https://image.tmdb.org/t/p/w500/${m.poster_path}`}
-                                alt='movie poster' />
-                        </div>
-                    ))}
+                    <div class="card-columns">
+                        {movies.map((m) => (
+                            <div className="card" style={{width: '18rem'}}>
+                                <img className="card-img-top"
+                                    src={`https://image.tmdb.org/t/p/w500/${m.poster_path}`}
+                                    alt={m.original_title} />
+                            </div>
+                        ))}
+                    </div>
                 </ul>
             </div>
         )

@@ -19,7 +19,9 @@ class App extends Component {
 
   render(){
     return (
-      <Dashboard movies={this.state.movies}/>
+      <div className='container'>
+        <Dashboard movies={this.state.movies}/>
+      </div>
     )
   }
 }
